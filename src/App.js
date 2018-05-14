@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {LoginPage}  from './pages/loginPage'
+import { LoginPage } from './pages/LoginPage'
+import './styles/style.scss'
 
 class App extends Component {
   render() {
     return (
       <div >
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        
-<div className="App">
-        <LoginPage />
-      </div>
-      <hr />
+        <main role="main" className="container pt-7">
+          <div className="row">
+            <div className="col-md-6 offset-md-4">
+              <div className="card" style={{ width: '30rem' }}>
+               
+                <div className="card-body">
+
+                  <p>asdasdsadsa</p>
+
+                  <hr />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </main>
       </div>
     );
   }
 }
 
 export default App;
+

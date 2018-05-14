@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LoginView from  '@spillay/usercontrolmanager'
+import LoginView from  '@spillay/formmanager'
 import { loginForm } from '../forms/form.json'
-import '../styles/ucm.css'
+import '../styles/fm.css'
+import '../styles/style.scss'
 
 export class LoginPage extends React.Component {
     constructor(props) {
         super(props);
+        console.log("submitFunc.....")
     } // end of constructor
 
     submitFunc = () => {
