@@ -7,16 +7,20 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   output: {
-    path: path.join(__dirname, 'public', 'dist'),
+    path: path.resolve(__dirname, 'public', 'dist'),
     filename: 'bundle.js',
-    libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
+    /*
+    set the output as a library
+    libraryTarget: "commonjs2" The return value of your entry point will be assigned to the module.exports.
+    */
+    // libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
   },
   module: {
     rules: [
       {
         test: /\.jsx$/,
         include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components|dist)/,
+        exclude: /(node_modules|bower_components)/,
 
         use: {
           loader: 'babel-loader',
@@ -32,7 +36,7 @@ module.exports = {
       {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components|dist)/,
+        exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -52,16 +56,36 @@ module.exports = {
           'sass-loader' // compiles Sass to CSS
         ]
       },
-      {
-        test: /\.(eot|woff|woff2|ttf|svg|png|PNG|jpe?g|gif)(\?\S*)?$/,
-        loader: 'url-loader?limit=100000&name=/public/images/[name].[ext]'
-      }
+      // {
+
+      //   test: /\.(svg|png|PNG|jpe?g|gif)(\?\S*)?$/,
+      //   loader: 'url-loader?limit=100000&name=/public/images/[name].[ext]'
+      // },
+      // { test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/
+      //   , loader: 'url-loader?limit=100000&name=[name].[ext]'
+      //   },
+
+        {
+          test: /\.json$/,
+          loader: 'json-loader',
+    }, {
+          test: /\.txt$/,
+          loader: 'raw-loader',
+    }, {
+          test: /\.(png|PNG|jpg|jpeg|gif|svg|woff|woff2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          loader: 'url-loader?limit=100000&name=/public/images/[name].[ext]'
+    }, {
+          test: /\.(eot|ttf|wav|mp3|pdf)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          loader: 'file-loader',
+    },
+
+
     ]
   },
 
-  externals: {
-    'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
-  },
+  // externals: {
+  //   'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
+  // },
   performance: {
     hints: process.env.NODE_ENV === 'production' ? "warning" : false
   },
