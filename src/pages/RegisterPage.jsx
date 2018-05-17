@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import LoginView from  '@spillay/formmanager'
 import { loginForm } from '../forms/form.json'
 // import '../styles/fm.css'
-import '../styles/style.scss'
+import '../styles/styles.scss'
 
 export  class RegisterPage extends React.Component {
     constructor(props) {

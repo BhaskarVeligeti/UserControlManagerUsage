@@ -1,0 +1,6 @@
+
+@import "~@spillay/formmanager/dist/css/formmanager.css";  // this is from Parent ( formmanager )
+
+// child : if you want override
+@import './base/settings';
+@import './base/app';

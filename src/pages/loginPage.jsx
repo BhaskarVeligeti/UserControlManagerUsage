@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { LoginView } from '@spillay/formmanager'
 import { loginForm } from '../forms/form.json'
 import logo from '../../public/images/SouthAfricanflag.png'
-import '../styles/fm.css' // is it the correct place ?
-import '../styles/style.scss'
+import '../styles/styles.scss'
 
 export class LoginPage extends React.Component {
   constructor(props) {
