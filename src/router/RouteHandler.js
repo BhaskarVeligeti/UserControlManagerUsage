@@ -15,13 +15,13 @@ export class RouteHandler extends React.Component {
 
   }
 
-  componentDidMount() {
-    $('[data-toggle="tooltip"]').tooltip();
-  }
+  // componentDidMount() {
+  //   $('[data-toggle="tooltip"]').tooltip();
+  // }
 
-  componentDidUpdate() {
-    $('[data-toggle="tooltip"]').tooltip();
-  }
+  // componentDidUpdate() {
+  //   $('[data-toggle="tooltip"]').tooltip();
+  // }
 
 
   render() {

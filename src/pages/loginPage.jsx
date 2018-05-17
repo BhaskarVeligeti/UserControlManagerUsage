@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { LoginView } from '@spillay/formmanager'
 import { loginForm } from '../forms/form.json'
 import logo from '../../public/images/SouthAfricanflag.png'
-import '../styles/styles.scss'
+// import '../styles/loginview.css';  // i want override
+
 
 export class LoginPage extends React.Component {
   constructor(props) {
@@ -19,7 +21,8 @@ export class LoginPage extends React.Component {
     console.log("LoginPage.....")
     return (
 
-      <div >
+      <div>
+
         <LoginView
           modelForm={loginForm}
           groups={1}  // groups will be 1 to 4 only 1=col-md-12,  2= col-md-6 , 3=col-md-4  4= col-md-3
@@ -27,12 +30,7 @@ export class LoginPage extends React.Component {
           submitFunc={this.submitFunc}
           logo={logo} >
         </LoginView>
-
-      </div>
-
-
-
-
+        </div>
     )
   }
 } // end of LoginPage

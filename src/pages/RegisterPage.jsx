@@ -1,44 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LoginView from  '@spillay/formmanager'
-import { loginForm } from '../forms/form.json'
-// import '../styles/fm.css'
-import '../styles/styles.scss'
+import logo from '../../public/images/Loader.gif'
+import { RegisterView } from '@spillay/formmanager'
+import { registrationForm } from '../forms/form.json'
 
-export  class RegisterPage extends React.Component {
-    constructor(props) {
-        super(props);
-    } // end of constructor
 
-    submitFunc = () => {
-        console.log("submitFunc.....")
-    }
+export class RegisterPage extends React.Component {
+  constructor(props) {
+    super(props);
+  } // end of constructor
 
-    render() {
+  submitFunc = () => {
+    console.log("submitFunc.....")
+  }
 
-        return (
-            <div >
-            <main role="main" className="container pt-7">
-              <div className="row">
-                <div className="col-md-6 offset-md-4">
-                  <div className="card" style={{ width: '30rem' }}>
-                   
-                    <div className="card-body">
-                    <div className="alert alert-primary" role="alert">
-                    RegisterPage!
-                  </div>
-                   
-    
-                      <hr />
-                    </div>
-                  </div>
-    
-                </div>
-              </div>
-            </main>
-          </div>
+  render() {
 
-        )
-    }
+    return (
+      <div >
+        <RegisterView
+          modelForm={registrationForm}
+          groups={2}  // groups will be 1 to 4 only 1=col-md-12,  2= col-md-6 , 3=col-md-4  4= col-md-3
+          columns="col-md-6"
+          submitFunc={this.submitFunc}
+          logo={logo} >
+        </RegisterView>
+      </div>
+
+    )
+  }
 } // end of RegisterPage
 

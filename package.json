@@ -82,16 +82,12 @@
   "homepage": "https://github.com/spillay/FormManager#readme",
   "dependencies": {
     "aphrodite": "^2.2.0",
-    "bootstrap": "^4.0.0",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
-    "font-awesome": "^4.7.0",
     "history": "^4.7.2",
     "jest": "^22.4.3",
     "jquery": "^3.3.1",
     "json-loader": "^0.5.7",
-    "moment": "^2.18.1",
-    "popper.js": "^1.12.3",
     "prop-types": "^15.6.1",
     "raw-loader": "^0.5.1",
     "react": "^16.3.2",
@@ -110,14 +106,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "peerDependencies": {
-    "bootstrap": "^4.0.0",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "moment": "^2.22.1",
     "node-sass": "^4.7.2",
-    "popper.js": "^1.12.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -125,7 +116,6 @@
     "react-with-styles-interface-aphrodite": "^5.0.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
-    "tether": "^1.4.3",
     "url-loader": "^0.6.2",
     "webpack": "^4.6.0"
   }
