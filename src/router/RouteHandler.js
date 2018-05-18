@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { history } from '../helpers'
 import { PublicRoute } from '../router'
-import { LoginPage, RegisterPage,NotFoundPage } from '../pages'
+import { LoginPage, RegisterPage,NotFoundPage,ForgotPasswordPage } from '../pages'
 
 
 export class RouteHandler extends React.Component {
@@ -31,6 +31,7 @@ export class RouteHandler extends React.Component {
           <Switch>
             <PublicRoute path='/login' component={LoginPage} />
             <PublicRoute path='/register' component={RegisterPage} />
+            <PublicRoute  path='/forgotpassword' component={ForgotPasswordPage} />
             <PublicRoute component={NotFoundPage} path="/" />
           </Switch>
         </div>
