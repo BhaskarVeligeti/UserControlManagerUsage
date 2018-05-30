@@ -27,7 +27,19 @@ export const loginForm = [
       key: 'role', label: 'Role', type: 'checkbox', fieldValidations: { required: true }, opts: { inline: false }, options: [
         { key: 'admin', label: 'Admin', value: 'Admin' },
         { key: 'capturer', label: 'Capturer', value: 'Capturer' },
-        { key: 'superuser', label: ' Super User', value: ' Super User' }
+        { key: 'superuser', label: ' Super User', value: ' Super User' },
+        { key: 'Department Coordinator', label: 'Department Coordinator', value: '1'},
+        { key: 'Capturer (Delegated User)', label: 'Capturer (Delegated User)', value: '2'},
+        { key: 'DPME Coordinator', label: 'DPME Coordinator', value: '3'},
+        { key: 'Treasury Coordinator', label: 'Treasury Coordinator', value: '4'},
+        { key: 'System Administrator (Super User)', label: 'System Administrator (Super User)', value: '5'},
+        { key: 'Head of Department', label: 'Head of Department', value: '6'},
+        { key: 'Transferring Department Coordinator', label: 'Transferring Department Coordinator', value: '7'},
+        { key: 'OTP Coordinator', label: 'OTP Coordinator', value: '8'},
+        { key: 'National Oversight', label: 'National Oversight', value: '9'},
+        { key: 'Entity Coordinator', label: 'Entity Coordinator', value: '10'},
+        { key: 'National Coordinator', label: 'National Coordinator', value: '11'},
+        { key: 'Public User', label: 'Public User', value: '12'}
       ]
     }
 
