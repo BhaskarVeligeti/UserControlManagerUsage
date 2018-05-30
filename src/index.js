@@ -12,6 +12,8 @@ import '../node_modules/@spillay/formmanager/node_modules/bootstrap-select/js/bo
 import '../node_modules/@spillay/formmanager/node_modules/react-dates/lib/css/_datepicker.css'
 import '../node_modules/@spillay/formmanager/node_modules/react-dates/initialize';
 
+import  'react-bootstrap-table/dist/react-bootstrap-table.min.css'
+import 'react-block-ui/style.css';
 
 
 ReactDOM.render(<RouteHandler />, document.getElementById('root'));

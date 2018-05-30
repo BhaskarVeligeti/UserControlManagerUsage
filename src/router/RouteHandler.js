@@ -11,7 +11,8 @@ import {
   RegisterPage,
   NotFoundPage,
   ForgotPasswordPage,
-  UsersRoleAssignPage 
+  UsersRoleAssignPage,
+  SearchUserPage 
 } from '../pages'
 
 
@@ -39,6 +40,7 @@ export class RouteHandler extends React.Component {
             <PublicRoute path='/register' component={RegisterPage} />
             <PublicRoute  path='/forgotpassword' component={ForgotPasswordPage} />
             <PublicRoute  path='/usersrole' component={UsersRoleAssignPage} />
+            <PublicRoute  path='/search' component={SearchUserPage} />
             <PublicRoute component={NotFoundPage} path="/" />
           </Switch>
         </div>

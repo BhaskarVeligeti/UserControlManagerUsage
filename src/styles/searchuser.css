@@ -1,0 +1,9 @@
+.custom-row-select-bg{
+	background-color:#edf2f8!important;	
+}
+
+.custom-table-header{
+	font-size: 10px;
+	font-family: Verdana, "Verdana CE", Arial, "Arial CE","Lucida Grande CE", lucida, "Helvetica CE", Helvetica;
+	background-image: -webkit-radial-gradient(right center, ellipse farthest-side, #FFFFFF 0%,#B0B0B0 300%);		
+}
