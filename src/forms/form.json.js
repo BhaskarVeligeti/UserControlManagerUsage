@@ -14,6 +14,24 @@ export const loginForm = [
     { key: 'matchpassword', label: 'Match Password', type: 'password', fieldValidations: { required: true, minLength: 6 }, options: { autoComplete: 'current-password', placeholder: 'Password..', icon: 'fa fa fa-lock' } }
   ]
   
+  export const multyRoleAssignForm = [
+    {
+      key: 'users', label: 'Users', type: 'select', header:'User...',opts: { autoComplete: 'family-name' }, options: [
+        { key: 'user1', label: 'User1', value: 'User1' },
+        { key: 'user2', label: 'User2', value: 'User2' },
+        { key: 'user3', label: 'User3', value: 'User3' }
+      ]
+    },
+
+    {
+      key: 'role', label: 'Role', type: 'checkbox', fieldValidations: { required: true }, opts: { inline: false }, options: [
+        { key: 'admin', label: 'Admin', value: 'Admin' },
+        { key: 'capturer', label: 'Capturer', value: 'Capturer' },
+        { key: 'superuser', label: ' Super User', value: ' Super User' }
+      ]
+    }
+
+  ]
   
   export const registrationForm = [
   
@@ -23,7 +41,7 @@ export const loginForm = [
   
     { key: 'createdAt', label: 'CreatedAt', type: 'SingleDatePicker', fieldValidations: { isSDP: true }, options: { readOnly: true, numberOfMonths: 1, isOutsideRange: () => false, small: true, block: true, noBorder: true, displayFormat: 'MMM Do YYYY' } },
     {
-      key: 'role', label: 'Role', type: 'select', opts: { autoComplete: 'family-name' }, options: [
+      key: 'role', label: 'Role', type: 'select', header:'Role...', opts: { autoComplete: 'family-name' }, options: [
         { key: 'admin', label: 'Admin', value: 'Admin' },
         { key: 'capturer', label: 'Capturer', value: 'Capturer' },
         { key: 'superuser', label: ' Super User', value: ' Super User' }
@@ -78,7 +96,7 @@ export const loginForm = [
   
     // select control :
     {
-      key: 'role', label: 'Role', type: 'select', opts: { autoComplete: 'family-name' }, options: [
+      key: 'role', label: 'Role', type: 'select',header:'Role...', opts: { autoComplete: 'family-name' }, options: [
         { key: 'admin', label: 'Admin', value: 'Admin' },
         { key: 'capturer', label: 'Capturer', value: 'Capturer' },
         { key: 'superuser', label: ' Super User', value: ' Super User' }

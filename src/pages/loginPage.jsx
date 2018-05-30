@@ -20,17 +20,13 @@ export class LoginPage extends React.Component {
 
     console.log("LoginPage.....")
     return (
-
-      <div>
-
-        <LoginView
+  <LoginView
           modelForm={loginForm}
           groups={1}  // groups will be 1 to 4 only 1=col-md-12,  2= col-md-6 , 3=col-md-4  4= col-md-3
           columns="col-md-12"
           submitFunc={this.submitFunc}
           logo={logo} >
         </LoginView>
-        </div>
     )
   }
 } // end of LoginPage
