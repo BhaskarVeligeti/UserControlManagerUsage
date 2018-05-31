@@ -18,35 +18,16 @@ module.exports = {
   module: {
     rules: [
       {
+        loader: 'babel-loader',
         test: /\.jsx$/,
         include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components)/,
-
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['react'],
-            'plugins': [
-              'transform-object-rest-spread',
-              'transform-react-jsx'
-            ]
-          }
-        }
+        exclude: /(node_modules|bower_components)/
       },
       {
+        loader: 'babel-loader',
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env', 'react'],
-            'plugins': [
-              'transform-object-rest-spread',
-              'transform-react-jsx'
-            ]
-          }
-        }
+        exclude: /(node_modules|bower_components)/
       },
       {
         test: /\.s?css$/,

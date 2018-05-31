@@ -1,0 +1,34 @@
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 2px;
+  }
+  
+  /* Style the dots by assigning a fill and stroke */
+.dot {
+  fill: #7546e2;
+  stroke: #fff;
+}
+ /* for X -axis */
+  .axisX line{
+    stroke: rgb(70, 141, 199);
+  }
+  
+  .axisX path{
+    stroke: steelblue;;
+  }
+  
+  .axisX text{
+    fill: rgb(28, 134, 45);
+  }
+
+   /* for Y -axis */
+  .axisY line{
+    stroke: rgb(70, 141, 199);
+  }
+  .axisY path{
+    stroke: steelblue;;
+  }
+  .axisY text{
+    fill: rgb(146, 32, 161);
+  }
