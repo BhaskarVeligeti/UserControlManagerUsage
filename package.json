@@ -16,16 +16,12 @@
   "scripts": {
     "webpack-watch": "webpack --mode development --watch",
     "start": "nodemon -e src/styles/ -x \"npm run sass\" --exec 'npm run webpack-watch'",
-    "build": "npm run prebuild && npm run sass && webpack --mode production",
+    "build": "webpack --mode production",
     "dev-server": "webpack-dev-server --hot --inline  --mode development",
     "build:tests": "rimraf test-dist/ && babel test/ --out-dir test-dist/",
     "test-mocha": "node node_modules/mocha/bin/mocha --compilers js:babel-core/register --reporter spec test-dist/*",
     "test-jest": "jest",
-    "clean": "rimraf dist/ && rimraf test-dist/",
-    "sass:dist-min": "node-sass  --output-style=compressed --importer=node_modules/node-sass-tilde-importer src/styles/styles.scss > dist/css/ucm.min.css",
-    "sass:dist": "node-sass  --importer=node_modules/node-sass-tilde-importer src/styles/styles.scss > dist/css/ucm.css",
-    "sass": "npm run sass:dist-min && npm run sass:dist",
-    "prebuild": "mkdirp ./dist && mkdirp ./dist/css"
+    "clean": "rimraf dist/ && rimraf test-dist/"
   },
   "repository": {
     "type": "git",
