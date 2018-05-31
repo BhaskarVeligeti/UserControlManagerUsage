@@ -18,8 +18,8 @@ export class LoginPage extends React.Component {
 
   } // end of constructor
 
-  submitFunc = () => {
-    console.log("submitFunc.....")
+  submitFunc = (res) => {
+    console.log("submitFunc.....",res)
     this.setState({blocking: !this.state.blocking});
   }
 
