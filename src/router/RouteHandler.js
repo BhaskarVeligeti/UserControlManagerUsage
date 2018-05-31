@@ -6,6 +6,7 @@ import React, { Component } from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { history } from '../helpers'
 import { PublicRoute } from '../router'
+import {DragAndDropPage} from '../dragdrop'
 import { 
   LoginPage, 
   RegisterPage,
@@ -15,6 +16,7 @@ import {
   SearchUserPage ,
   DashboardPage
 } from '../pages'
+
 
 
 export class RouteHandler extends React.Component {
@@ -43,6 +45,7 @@ export class RouteHandler extends React.Component {
             <PublicRoute  path='/usersrole' component={UsersRoleAssignPage} />
             <PublicRoute  path='/search' component={SearchUserPage} />
             <PublicRoute  path='/dashboard' component={DashboardPage} />
+            <PublicRoute  path='/dd' component={DragAndDropPage} />
             <PublicRoute component={NotFoundPage} path="/" />
           </Switch>
         </div>
