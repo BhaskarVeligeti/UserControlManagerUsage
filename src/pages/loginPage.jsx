@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { LoginView } from '@spillay/formmanager'
 import { loginForm } from '../forms/form.json'
 import logo from '../../public/images/SouthAfricanflag.png'
-// import '../styles/loginview.css';  // i want override
+import '../styles/loginview.css';  // i want override
 
 
 export class LoginPage extends React.Component {
@@ -20,13 +20,13 @@ export class LoginPage extends React.Component {
 
     console.log("LoginPage.....")
     return (
-  <LoginView
-          modelForm={loginForm}
-          groups={1}  // groups will be 1 to 4 only 1=col-md-12,  2= col-md-6 , 3=col-md-4  4= col-md-3
-          columns="col-md-12"
-          submitFunc={this.submitFunc}
-          logo={logo} >
-        </LoginView>
+      <LoginView
+        modelForm={loginForm}
+        groups={1}  // groups will be 1 to 4 only 1=col-md-12,  2= col-md-6 , 3=col-md-4  4= col-md-3
+        columns="col-md-12"
+        submitFunc={this.submitFunc}
+        logo={logo} >
+      </LoginView>
     )
   }
 } // end of LoginPage

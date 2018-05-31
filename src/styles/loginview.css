@@ -1,7 +1,19 @@
  /* this will override the formmanager.css classess */
+/* 
+ html {
+	font-size: 13px; 
 
+	
+    } */
+    
+ body {
 
-label {
+     background: url(../../public/images/background.png)!important;
+     /* background: url(../../public/images/background.jpg)!important; */
+    }
+    
+
+/* label {
 	
     color:blue!important;
-}
+} */
